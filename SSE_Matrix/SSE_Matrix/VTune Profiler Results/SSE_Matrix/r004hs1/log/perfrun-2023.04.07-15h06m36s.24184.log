@@ -1,0 +1,134 @@
+97 [22560] INFO perfrun.launcher <> - Launcher main begin
+105 [22560] INFO perfrun.launcher <> - MessageCatalogInit finished
+105 [22560] INFO perfrun.launcher <> - Launcher instance created
+105 [22560] INFO perfrun.launcher <> - argc = 7; cmdline = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\amplxe-runss.exe --ui-output-format xml --ui-output-fd 1332 --option-file C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\config\runsa.options 
+178 [22560] INFO perfrun.launcher <> - New signal handler callback was added
+303 [22560] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+303 [22560] INFO perfrun.launcher <> - create file finder object
+303 [22560] INFO perfrun.launcher <> - create a result directory: pattern = C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1 pid = 4294967295
+309 [22560] INFO perfrun.launcher <> - create data directory = C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0
+311 [22560] INFO perfrun.launcher <> - Creating the master collection flag
+317 [22560] INFO perfrun.launcher <> - Done creating the master collection flag
+318 [21920] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+318 [21920] INFO perfrun.sdk <> - Allocating TMU :C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0\systemcollector-24184-LAPTOP-MC265AGH.sc
+319 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.launcher <> - plugin [gpu] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.launcher <> - plugin [etw.kernel] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.launcher <> - plugin [etw.dx] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.launcher <> - plugin [etw.wsa] was disabled because it doesn't support the given collection type.
+322 [21920] INFO perfrun.mrte <> - system-wide mode is 0
+323 [21920] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+393 [21920] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0
+393 [21920] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=LAPTOP-MC265AGH
+393 [21920] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:amplxe_samplingmrte_javaprof_1.0
+393 [21920] INFO perfrun.mrte <> - PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;E:\vmware\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;E:\;E:\TDM-GCC\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO22\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\LENOVO22\AppData\Roaming\npm
+393 [21920] INFO perfrun.mrte <> - COR_ENABLE_PROFILING=1
+394 [21920] INFO perfrun.mrte <> - COR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+394 [21920] INFO perfrun.mrte <> - COMPLUS_ProfAPI_ProfilerCompatibilitySetting=EnableV2Profiler
+394 [21920] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+394 [21920] INFO perfrun.mrte <> - CORECLR_PROFILER={AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+394 [21920] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+394 [21920] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+394 [21920] INFO perfrun.mrte <> - Data directory: C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0
+394 [21920] INFO perfrun.mrte <> - Mrte plugin is initialized
+394 [21920] INFO perfrun.launcher <> - plugin [emon] was disabled because it doesn't support the given collection type.
+394 [21920] INFO perfrun.launcher <> - plugin [cuscol] was disabled because it doesn't support the given collection type.
+394 [21920] INFO perfrun.launcher <> - plugin [stdsrc] was disabled because it doesn't support the given collection type.
+394 [21920] INFO perfrun.launcher <> - plugin [sep] was disabled because it doesn't support the given collection type.
+482 [21920] INFO perfrun.sdk <> - runCmd: "C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\sep.exe" -dry-run -ec CPU_CLK_UNHALTED.DISTRIBUTED:sa=2000003:precise=yes,CPU_CLK_UNHALTED.REF_TSC:sa=2300000:precise=yes,CPU_CLK_UNHALTED.THREAD:sa=2000003:precise=yes,FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.SCALAR_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.SCALAR_SINGLE:sa=100003:precise=yes,INST_RETIRED.ANY:sa=2300000:precise=yes,TOPDOWN.SLOTS:sa=2000003:precise=yes,UOPS_EXECUTED.THREAD:sa=2000003:precise=yes,UOPS_EXECUTED.X87:sa=2000003:precise=yes,UOPS_RETIRED.SLOTS:sa=2000003:precise=yes,MEM_LOAD_L3_HIT_RETIRED.XSNP_NONE:sa=100003:precise=yes,MEM_LOAD_RETIRED.L1_HIT:sa=1000003:precise=yes,MEM_LOAD_RETIRED.L1_MISS:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_HIT:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_MISS:sa=100021:precise=yes,MEM_LOAD_RETIRED.L3_HIT:sa=100021:precise=yes,MEM_LOAD_RETIRED.L3_MISS:sa=50021:precise=yes,BR_INST_RETIRED.NEAR_TAKEN:sa=200003:usr=yes:os=no -experimental
+487 [21920] INFO perfrun.sdk <> - runCmd started PID 17604
+636 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [aoclprofile] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.tpss <> - initialize tpss controller
+636 [21920] INFO perfrun.launcher <> - plugin [tpss] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [power] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [hwloc] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [ipmwatch] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [os_counters] was disabled because it doesn't support the given collection type.
+636 [21920] INFO perfrun.launcher <> - plugin [l0_metrics] was disabled because it doesn't support the given collection type.
+637 [22560] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;E:\vmware\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;E:\;E:\TDM-GCC\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO22\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\LENOVO22\AppData\Roaming\npm
+637 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY32 = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime\ittnotify_collector.dll
+637 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY64 = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime\ittnotify_collector.dll
+637 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_ITTNOTIFY_GROUPS = 
+637 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER32 = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime\ittnotify_collector.dll
+637 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER64 = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime\ittnotify_collector.dll
+638 [22560] INFO perfrun.launcher <> - set environment variable: OMP_TOOL_LIBRARIES = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime\ittnotify_collector.dll;C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime\ittnotify_collector.dll
+638 [22560] INFO perfrun.launcher <> - set environment variable: ENABLE_JITPROFILING = 1
+638 [22560] INFO perfrun.launcher <> - set environment variable: CL_CONFIG_USE_VTUNE = True
+638 [22560] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES = 0
+638 [22560] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES_MODE = 0
+638 [22560] INFO perfrun.launcher <> - set environment variable: OMP_TOOL = disabled
+638 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0
+638 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = LAPTOP-MC265AGH
+638 [22560] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:amplxe_samplingmrte_javaprof_1.0
+638 [22560] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64\runtime;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;E:\vmware\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;E:\;E:\TDM-GCC\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO22\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\LENOVO22\AppData\Roaming\npm
+639 [22560] INFO perfrun.launcher <> - set environment variable: COR_ENABLE_PROFILING = 1
+639 [22560] INFO perfrun.launcher <> - set environment variable: COR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+639 [22560] INFO perfrun.launcher <> - set environment variable: COMPLUS_ProfAPI_ProfilerCompatibilitySetting = EnableV2Profiler
+639 [22560] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+639 [22560] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = {AA5E4821-E3B1-479c-B7FF-5AD047D22CED}
+639 [22560] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = C:\Program Files (x86)\Intel\oneAPI\vtune\latest\bin64/amplxe_samplingmrte_clrprof_1.0.dll
+639 [22560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+639 [22560] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+642 [22560] INFO perfrun.sdk <> - IProcessUtil: the given executable 'C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\Debug\AVX_matrix.exe' is valid.
+643 [22560] INFO perfrun.launcher <> - Launcher: command line to start before modification = C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\Debug\AVX_matrix.exe
+643 [22560] INFO perfrun.launcher <> - Launcher: command line to start after modification = C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\Debug\AVX_matrix.exe
+643 [22560] INFO perfrun.launcher <> - ProcessCreator object was created
+644 [22560] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+650 [21920] INFO perfrun.itt <> - start itt controller for pid #17888
+651 [21920] INFO perfrun.vtsspp <> - event: INST_RETIRED.ANY: id = 11, group = 0, pmu = 0, ctrl = 38d/111100003333, data = 309/ffffffdce7a0, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.THREAD: id = 2, group = 0, pmu = 0, ctrl = 38d/111100003333, data = 30a/ffffffe17b7d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.REF_TSC: id = 1, group = 0, pmu = 0, ctrl = 38d/111100003333, data = 30b/ffffffdce7a0, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: TOPDOWN.SLOTS: id = 12, group = 0, pmu = 0, ctrl = 38d/111100003333, data = 30c/ffffffe17b7d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_L3_HIT_RETIRED.XSNP_NONE: id = 16, group = 0, pmu = 0, ctrl = 186/4004308d2, data = c1/fffffffe795d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L1_HIT: id = 17, group = 0, pmu = 0, ctrl = 187/4004301d1, data = c2/fffffff0bdbd, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L1_MISS: id = 18, group = 0, pmu = 0, ctrl = 188/4004308d1, data = c3/fffffffcf2bd, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L2_HIT: id = 19, group = 0, pmu = 0, ctrl = 189/4004302d1, data = c4/fffffffcf2bd, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.DISTRIBUTED: id = 0, group = 0, pmu = 0, ctrl = 18a/4004302ec, data = c5/ffffffe17b7d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE: id = 3, group = 0, pmu = 0, ctrl = 18b/4004304c7, data = c6/fffffffe795d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE: id = 4, group = 0, pmu = 0, ctrl = 18c/4004308c7, data = c7/fffffffe795d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE: id = 5, group = 0, pmu = 0, ctrl = 18d/4004310c7, data = c8/fffffffe795d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: INST_RETIRED.ANY: id = 11, group = 1, pmu = 0, ctrl = 38d/111100003333, data = 309/ffffffdce7a0, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.THREAD: id = 2, group = 1, pmu = 0, ctrl = 38d/111100003333, data = 30a/ffffffe17b7d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.REF_TSC: id = 1, group = 1, pmu = 0, ctrl = 38d/111100003333, data = 30b/ffffffdce7a0, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: TOPDOWN.SLOTS: id = 12, group = 1, pmu = 0, ctrl = 38d/111100003333, data = 30c/ffffffe17b7d, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L2_MISS: id = 20, group = 1, pmu = 0, ctrl = 186/4004310d1, data = c1/fffffffe794b, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L3_HIT: id = 21, group = 1, pmu = 0, ctrl = 187/4004304d1, data = c2/fffffffe794b, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: MEM_LOAD_RETIRED.L3_MISS: id = 22, group = 1, pmu = 0, ctrl = 188/4004320d1, data = c3/ffffffff3c9b, escr = 0/0
+651 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE: id = 6, group = 1, pmu = 0, ctrl = 189/4004320c7, data = c4/fffffffe795d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE: id = 7, group = 1, pmu = 0, ctrl = 18a/4004340c7, data = c5/fffffffe795d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE: id = 8, group = 1, pmu = 0, ctrl = 18b/4004380c7, data = c6/fffffffe795d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.SCALAR_DOUBLE: id = 9, group = 1, pmu = 0, ctrl = 18c/4004301c7, data = c7/fffffffe795d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: FP_ARITH_INST_RETIRED.SCALAR_SINGLE: id = 10, group = 1, pmu = 0, ctrl = 18d/4004302c7, data = c8/fffffffe795d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: INST_RETIRED.ANY: id = 11, group = 2, pmu = 0, ctrl = 38d/111100003333, data = 309/ffffffdce7a0, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.THREAD: id = 2, group = 2, pmu = 0, ctrl = 38d/111100003333, data = 30a/ffffffe17b7d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: CPU_CLK_UNHALTED.REF_TSC: id = 1, group = 2, pmu = 0, ctrl = 38d/111100003333, data = 30b/ffffffdce7a0, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: TOPDOWN.SLOTS: id = 12, group = 2, pmu = 0, ctrl = 38d/111100003333, data = 30c/ffffffe17b7d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: UOPS_EXECUTED.THREAD: id = 13, group = 2, pmu = 0, ctrl = 186/4004301b1, data = c1/ffffffe17b7d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: UOPS_EXECUTED.X87: id = 14, group = 2, pmu = 0, ctrl = 187/4004310b1, data = c2/ffffffe17b7d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: UOPS_RETIRED.SLOTS: id = 15, group = 2, pmu = 0, ctrl = 188/4004302c2, data = c3/ffffffe17b7d, escr = 0/0
+652 [21920] INFO perfrun.vtsspp <> - event: BR_INST_RETIRED.NEAR_TAKEN: id = 23, group = 2, pmu = 0, ctrl = 189/4004120c4, data = c4/fffffffcf2bd, escr = 0/0
+819 [22560] INFO perfrun.launcher <> - Launcher: all plugins were started
+819 [22560] INFO perfrun.launcher <> - DirectoryMonitor object was created
+819 [22560] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+819 [22560] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+819 [22560] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+820 [22560] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+831 [22560] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+3557 [22560] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+3566 [21920] INFO perfrun.itt <> - detach itt controller
+3566 [21920] INFO perfrun.itt <> - detach itt controller done
+3567 [21920] INFO perfrun.sdk <> - De-allocating TMU: C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0\systemcollector-24184-LAPTOP-MC265AGH.sc
+3584 [21920] INFO perfrun.system <> - closed the system trace file: C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r004hs1\data.0\systemcollector-24184-LAPTOP-MC265AGH.sc
+3584 [22560] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+3584 [22560] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+3584 [22560] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+3585 [22560] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+3585 [22560] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: C:\BB\ANphep2w6r\b\tmp2iy5aj\vcs\perfrun1\launcher\src\command_handler.cpp:226
+3587 [22560] INFO perfrun.launcher <> - Application exit code: 0
+3587 [22560] INFO perfrun.launcher <> - Exit code: 0

@@ -1,0 +1,16 @@
+-r
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\VTune Profiler Results\AVX_Conv\r000ps
+--stack-stitching
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet
+--stack-unwind-limit=8388608
+--itt-config=frame
+--stackwalk=offline
+--mrte-mode=auto
+--type=cpu:counters:nostack
+--type=cpu:nostack
+--interval=100
+--app-working-dir=C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\
+--
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\Debug\AVX_Conv.exe

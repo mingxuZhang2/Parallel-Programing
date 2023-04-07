@@ -1,0 +1,4 @@
+﻿  SSE_Conv.cpp
+C:\Users\LENOVO22\source\repos\SSE_Conv\SSE_Conv\SSE_Conv.cpp(41,23): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\LENOVO22\source\repos\SSE_Conv\SSE_Conv\SSE_Conv.cpp(45,23): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  SSE_Conv.vcxproj -> C:\Users\LENOVO22\source\repos\SSE_Conv\Debug\SSE_Conv.exe

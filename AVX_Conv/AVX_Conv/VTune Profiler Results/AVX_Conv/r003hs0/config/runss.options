@@ -1,0 +1,18 @@
+-r
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\VTune Profiler Results\AVX_Conv\r003hs0
+--stack-stitching
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet,python
+--stack-unwind-limit=8388608
+--itt-config=frame
+--itt-config=task,event,counter
+--stackwalk=offline
+--mrte-mode=auto
+--type=cpu:counters:nostack
+--type=cpu:stack
+--interval=10
+--event-config=MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS:sa=20011:precise=yes,MEM_LOAD_RETIRED.L1_HIT:sa=1000003:precise=yes,MEM_LOAD_RETIRED.L1_MISS:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_HIT:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_MISS:sa=100021:precise=yes
+--app-working-dir=C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\
+--
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\Debug\AVX_Conv.exe

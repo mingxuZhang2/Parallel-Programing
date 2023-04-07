@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1680836367</timestamp>
+  <hostname>LAPTOP-MC265AGH</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Profiler 2023.0.0</product>
+  <buildNumber type="s32_t">624757</buildNumber>
+  <logicalCPUCount type="s32_t">16</logicalCPUCount>
+  <physicalCoreCount type="s32_t">8</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">2300000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">141</CPUModel>
+  <CPUStepping type="s32_t">1</CPUStepping>
+  <CPUBrandName>11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz</CPUBrandName>
+  <isa>avx512</isa>
+  <collectionTimeBegin type="u64_t">1680836367</collectionTimeBegin>
+  <collectionTimeEnd type="u64_t">1680836378</collectionTimeEnd>
+  <variables>
+   <at>hs1</at>
+  </variables>
+ </rdmgr>
+</root>

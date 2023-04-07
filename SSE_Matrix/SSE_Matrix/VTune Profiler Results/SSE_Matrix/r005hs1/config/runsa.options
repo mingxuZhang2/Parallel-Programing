@@ -1,0 +1,21 @@
+-r
+C:\Users\LENOVO22\source\repos\SIMD\SSE_Matrix\SSE_Matrix\VTune Profiler Results\SSE_Matrix\r005hs1
+--itt-config=frame
+--collector=vtsspp
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet
+--stack-unwind-limit=8388608
+--event-config=CPU_CLK_UNHALTED.DISTRIBUTED:sa=2000003:precise=yes,CPU_CLK_UNHALTED.REF_TSC:sa=2300000:precise=yes,CPU_CLK_UNHALTED.THREAD:sa=2000003:precise=yes,FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.SCALAR_DOUBLE:sa=100003:precise=yes,FP_ARITH_INST_RETIRED.SCALAR_SINGLE:sa=100003:precise=yes,INST_RETIRED.ANY:sa=2300000:precise=yes,TOPDOWN.SLOTS:sa=2000003:precise=yes,UOPS_EXECUTED.THREAD:sa=2000003:precise=yes,UOPS_EXECUTED.X87:sa=2000003:precise=yes,UOPS_RETIRED.SLOTS:sa=2000003:precise=yes,MEM_LOAD_L3_HIT_RETIRED.XSNP_NONE:sa=100003:precise=yes,MEM_LOAD_RETIRED.L1_HIT:sa=1000003:precise=yes,MEM_LOAD_RETIRED.L1_MISS:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_HIT:sa=200003:precise=yes,MEM_LOAD_RETIRED.L2_MISS:sa=100021:precise=yes,MEM_LOAD_RETIRED.L3_HIT:sa=100021:precise=yes,MEM_LOAD_RETIRED.L3_MISS:sa=50021:precise=yes
+--event-config=BR_INST_RETIRED.NEAR_TAKEN:sa=200003:usr=yes:os=no
+--bts-count=200
+--platform-type=142
+--event-based-counts
+--event-mux-trigger=CPU_CLK_UNHALTED.REF_TSC
+--uncore-sampling-interval=10
+--mrte-mode=auto
+--itt-config=task,event,counter
+--etw-config=clr,js
+--app-working-dir=C:\Users\LENOVO22\source\repos\SIMD\origin_Matrix\Debug
+--
+C:\Users\LENOVO22\source\repos\SIMD\origin_Matrix\Debug\parallel.exe

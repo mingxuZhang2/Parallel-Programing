@@ -1,0 +1,19 @@
+-r
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\VTune Profiler Results\AVX_Conv\r004hs
+--itt-config=frame
+--event-mux-factor=5
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet
+--stack-unwind-limit=8388608
+--event-config=CPU_CLK_UNHALTED.THREAD,CPU_CLK_UNHALTED.REF_TSC:sample:sa=2300000,INST_RETIRED.ANY:sample:sa=2300000,CPU_CLK_UNHALTED.DISTRIBUTED,TOPDOWN.SLOTS:sample:sa=2000003,UOPS_RETIRED.SLOTS:sample:sa=2000003,FP_ARITH_INST_RETIRED.SCALAR_SINGLE,FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE,FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE,FP_ARITH_INST_RETIRED.SCALAR_DOUBLE,FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE,FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE,UOPS_EXECUTED.X87,UOPS_EXECUTED.THREAD,FP_ARITH_INST_RETIRED.512B_PACKED_DOUBLE,FP_ARITH_INST_RETIRED.512B_PACKED_SINGLE
+--platform-type=142
+--event-based-counts
+--event-mux-trigger=CPU_CLK_UNHALTED.REF_TSC
+--uncore-sampling-interval=10
+--mrte-mode=auto
+--itt-config=task,event,counter
+--etw-config=clr,js
+--app-working-dir=C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\
+--
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\Debug\AVX_Conv.exe

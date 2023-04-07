@@ -1,0 +1,4 @@
+﻿  AVX_Conv.cpp
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\AVX_Conv.cpp(57,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\AVX_Conv\AVX_Conv.cpp(62,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  AVX_Conv.vcxproj -> C:\Users\LENOVO22\source\repos\SIMD\AVX_Conv\Debug\AVX_Conv.exe

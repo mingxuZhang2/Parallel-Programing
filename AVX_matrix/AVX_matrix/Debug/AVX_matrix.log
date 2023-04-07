@@ -1,0 +1,12 @@
+﻿  AVX_matrix.cpp
+C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\AVX_matrix\AVX_matrix.cpp(35,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\AVX_matrix\AVX_matrix.cpp(40,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+  AVX_matrix.vcxproj -> C:\Users\LENOVO22\source\repos\SIMD\AVX_matrix\Debug\AVX_matrix.exe
