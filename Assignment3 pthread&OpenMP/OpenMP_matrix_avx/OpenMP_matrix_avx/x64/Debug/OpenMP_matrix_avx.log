@@ -1,0 +1,12 @@
+﻿  OpenMP_matrix_avx.cpp
+D:\VS's\parallel_code\OpenMP_matrix_avx\OpenMP_matrix_avx\OpenMP_matrix_avx.cpp(25,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+D:\VS's\parallel_code\OpenMP_matrix_avx\OpenMP_matrix_avx\OpenMP_matrix_avx.cpp(30,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+  OpenMP_matrix_avx.vcxproj -> D:\VS's\parallel_code\OpenMP_matrix_avx\x64\Debug\OpenMP_matrix_avx.exe
