@@ -1,0 +1,4 @@
+﻿  origin_pthread_conv.cpp
+C:\Users\LENOVO22\source\repos\origin_pthread_conv\origin_pthread_conv\origin_pthread_conv.cpp(55,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\LENOVO22\source\repos\origin_pthread_conv\origin_pthread_conv\origin_pthread_conv.cpp(60,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  origin_pthread_conv.vcxproj -> C:\Users\LENOVO22\source\repos\origin_pthread_conv\Debug\origin_pthread_conv.exe

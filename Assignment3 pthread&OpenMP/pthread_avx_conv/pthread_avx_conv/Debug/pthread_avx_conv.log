@@ -1,0 +1,4 @@
+﻿  pthread_avx_conv.cpp
+C:\Users\LENOVO22\source\repos\pthread_avx_conv\pthread_avx_conv\pthread_avx_conv.cpp(66,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\LENOVO22\source\repos\pthread_avx_conv\pthread_avx_conv\pthread_avx_conv.cpp(71,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  pthread_avx_conv.vcxproj -> C:\Users\LENOVO22\source\repos\pthread_avx_conv\Debug\pthread_avx_conv.exe
