@@ -1,0 +1,12 @@
+﻿  martix_pthread_avx.cpp
+C:\Users\LENOVO22\source\repos\martix_pthread_avx\martix_pthread_avx\martix_pthread_avx.cpp(62,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\LENOVO22\source\repos\martix_pthread_avx\martix_pthread_avx\martix_pthread_avx.cpp(67,19): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+  martix_pthread_avx.vcxproj -> C:\Users\LENOVO22\source\repos\martix_pthread_avx\Debug\martix_pthread_avx.exe
