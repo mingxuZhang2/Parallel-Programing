@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pooling Algorithm Runtime</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // 创建绘图数据
+    var data = {
+      labels: ["1000x1000", "2000x2000", "4000x4000", "8000x8000", "16000x16000", "32000x32000"],
+      datasets: [
+        {
+          label: "Origin",
+          data: [0.00500842, 0.0125016, 0.0844329, 0.447501, 2.25992, 5.74283],
+          backgroundColor: "rgba(255, 99, 132, 0.2)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1
+        },
+        {
+          label: "MPI",
+          data: [0.00443384, 0.0158015, 0.00666671, 0.0295291, 0.965222, 1.65425],
+          backgroundColor: "rgba(54, 162, 235, 0.2)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1
+        },
+        {
+          label: "MPI_OpenMP",
+          data: [0.000726752, 0.00597195, 0.0119086, 0.0724601, 0.302678, 0.698356],
+          backgroundColor: "rgba(75, 192, 192, 0.2)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1
+        },
+        {
+          label: "AVX_OpenMP_MPI",
+          data: [0.00201667, 0.00341615, 0.0137254, 0.0634052, 0.224352, 0.507988],
+          backgroundColor: "rgba(153, 102, 255, 0.2)",
+          borderColor: "rgba(153, 102, 255, 1)",
+          borderWidth: 1
+        }
+      ]
+    };
+
+    // 绘制折线图
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: data,
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            type: "category",
+            title: {
+              display: true,
+              text: "Pooling Size"
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: "Runtime (s)"
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

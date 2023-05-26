@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+
+    <script>
+        // 数据
+        var signal_length = [100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000];
+        var kernel_length = [8000, 16000, 24000, 32000, 40000, 48000, 56000, 64000, 72000, 80000];
+        var Origin = [0.772419, 3.1691, 7.12401, 12.6769, 19.8055, 28.7963, 38.8059, 50.7671, 66.2713, 91.2357];
+        var MPI = [0.194989, 0.806252, 1.8042, 3.18735, 4.96612, 7.12824, 9.70485, 12.6991, 17.5021, 23.1332];
+        var MPI_OpenMP = [0.115987, 0.574984, 1.04989, 1.98786, 3.00127, 4.26987, 6.24531, 7.67589, 9.97546, 11.99654];
+        var AVX_OpenMP_MPI = [0.105485, 0.474485, 1.06939, 1.89599, 2.96107, 4.24801, 5.86649, 7.76565, 9.99211, 12.3811];
+
+        // 创建图表
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: signal_length.map(String),
+                datasets: [
+                    {
+                        label: 'Origin',
+                        data: Origin,
+                        borderColor: 'red',
+                        backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                    },
+                    {
+                        label: 'MPI',
+                        data: MPI,
+                        borderColor: 'green',
+                        backgroundColor: 'rgba(0, 255, 0, 0.2)',
+                    },
+                    {
+                        label: 'MPI_OpenMP',
+                        data: MPI_OpenMP,
+                        borderColor: 'blue',
+                        backgroundColor: 'rgba(0, 0, 255, 0.2)',
+                    },
+                    {
+                        label: 'AVX_OpenMP_MPI',
+                        data: AVX_OpenMP_MPI,
+                        borderColor: 'orange',
+                        backgroundColor: 'rgba(255, 165, 0, 0.2)',
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Signal Length'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Execution Time'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

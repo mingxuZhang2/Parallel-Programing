@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart" width="400" height="200"></canvas>
+  <script>
+    // 数据
+    var data = {
+      labels: ["25000 75", "50000 150", "100000 300", "200000 600", "300000 900", "400000 1200", "500000 1500", "600000 1800"],
+      datasets: [
+        {
+          label: "Origin",
+          data: [0.019545, 0.16584, 0.999, 5.789, 13.689, 45.656, 179.798, 729.235],
+          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          fill: false
+        },
+        {
+          label: "MPI",
+          data: [0.020658, 0.0734297, 0.317183, 1.61169, 5.05952, 19.7265, 64.2789, 179.6515],
+          backgroundColor: "rgba(54, 162, 235, 0.5)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          fill: false
+        },
+        {
+          label: "MPI_OpenMP",
+          data: [0.0149876, 0.078964, 0.35987, 1.4988, 3.5478, 13.1215, 43.2365, 140.89841],
+          backgroundColor: "rgba(255, 206, 86, 0.5)",
+          borderColor: "rgba(255, 206, 86, 1)",
+          fill: false
+        },
+        {
+          label: "SIMD_OpenMP_MPI",
+          data: [0.0139778, 0.0693496, 0.329065, 1.49291, 3.72877, 12.79865, 45.14654, 135.8489],
+          backgroundColor: "rgba(75, 192, 192, 0.5)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          fill: false
+        }
+      ]
+    };
+
+    // 配置选项
+    var options = {
+      responsive: true,
+      scales: {
+        x: {
+          display: true,
+          title: {
+            display: true,
+            text: 'input_size embedding_dim'
+          }
+        },
+        y: {
+          display: true,
+          title: {
+            display: true,
+            text: '运行时间'
+          }
+        }
+      }
+    };
+
+    // 创建图表
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  </script>
+</body>
+</html>

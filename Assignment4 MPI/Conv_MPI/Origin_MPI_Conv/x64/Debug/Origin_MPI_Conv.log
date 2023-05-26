@@ -1,0 +1,4 @@
+﻿  Origin_MPI_Conv.cpp
+D:\VS's\parallel_code\MPI\Conv_MPI\Origin_MPI_Conv\Origin_MPI_Conv.cpp(102,34): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\MPI\Conv_MPI\Origin_MPI_Conv\Origin_MPI_Conv.cpp(169,139): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  Origin_MPI_Conv.vcxproj -> D:\VS's\parallel_code\MPI\Conv_MPI\x64\Debug\Origin_MPI_Conv.exe
