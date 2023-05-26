@@ -1,0 +1,31 @@
+[0526/113720.795:ERROR:gpu_init.cc(453)] Passthrough is not supported, GL is disabled, ANGLE is 
+[0526/114317.735:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.776:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.824:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.824:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=1073807364
+[0526/114317.824:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 1 time(s)
+[0526/114317.854:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.856:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.856:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 2 time(s)
+[0526/114317.866:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.880:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.880:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 3 time(s)
+[0526/114317.880:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.890:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.890:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 4 time(s)
+[0526/114317.900:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.900:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.900:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 5 time(s)
+[0526/114317.910:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.917:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.917:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 6 time(s)
+[0526/114317.925:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.928:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.928:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 7 time(s)
+[0526/114317.938:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.940:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.940:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 8 time(s)
+[0526/114317.950:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+[0526/114317.951:ERROR:gpu_process_host.cc(956)] GPU process exited unexpectedly: exit_code=-1073741205
+[0526/114317.951:WARNING:gpu_process_host.cc(1269)] The GPU process has crashed 9 time(s)
+[0526/114317.951:FATAL:gpu_data_manager_impl_private.cc(417)] GPU process isn't usable. Goodbye.
