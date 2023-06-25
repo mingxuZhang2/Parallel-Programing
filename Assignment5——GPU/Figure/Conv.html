@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convolution Time Comparison</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div>
+    <canvas id="lineChart" style="width: 600px; height: 400px;"></canvas>
+  </div>
+  <div>
+    <canvas id="barChart" style="width: 600px; height: 400px;"></canvas>
+  </div>
+
+  <script>
+    // 定义数据
+    var data = [
+      { signal_length: 100000, kernel_length: 8000, CPU: 1.41583, GPU128: 3.94428, GPU256: 4.06374 },
+      { signal_length: 200000, kernel_length: 16000, CPU: 5.73004, GPU128: 11.7509, GPU256: 11.9157 },
+      { signal_length: 210000, kernel_length: 16800, CPU: 6.24536, GPU128: 11.8978, GPU256: 10.213 },
+      { signal_length: 220000, kernel_length: 17600, CPU: 6.85904, GPU128: 13.0322, GPU256: 11.857 },
+      { signal_length: 230000, kernel_length: 18400, CPU: 7.57233, GPU128: 14.1802, GPU256: 12.7879 },
+      { signal_length: 240000, kernel_length: 19200, CPU: 8.2076, GPU128: 15.3765, GPU256: 13.773 },
+      { signal_length: 250000, kernel_length: 20000, CPU: 8.94796, GPU128: 16.5554, GPU256: 14.9997 }
+    ];
+
+    // 创建折线图
+    var lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: data.map(item => `${item.signal_length}_${item.kernel_length}`),
+        datasets: [
+          {
+            label: 'CPU Time (ms)',
+            data: data.map(item => item.CPU),
+            fill: false,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+            pointRadius: 4,
+            pointHoverRadius: 5
+          },
+          {
+            label: 'GPU128 Time (ms)',
+            data: data.map(item => item.GPU128),
+            fill: false,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+            pointRadius: 4,
+            pointHoverRadius: 5
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Time (ms)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Signal Length_Kernel Length'
+            }
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    // 创建柱状图
+    var barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: data.map(item => `${item.signal_length}_${item.kernel_length}`),
+        datasets: [
+          {
+            label: 'GPU128 Time (ms)',
+            data: data.map(item => item.GPU128),
+            backgroundColor: 'rgba(54, 162, 235, 0.8)'
+          },
+          {
+            label: 'GPU256 Time (ms)',
+            data: data.map(item => item.GPU256),
+            backgroundColor: 'rgba(255, 206, 86, 0.8)'
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Time (ms)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Signal Length_Kernel Length'
+            }
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>

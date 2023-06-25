@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PCA Execution Time</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="executionTimeChart"></canvas>
+    <canvas id="cpuTimeChart"></canvas>
+    <canvas id="gpuCpuComparisonChart"></canvas>
+
+    <script>
+        // PCA Execution Time Data
+        const executionTimeData = {
+            labels: ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8192"],
+            datasets: [
+                {
+                    label: "GPU (64)",
+                    data: [3107, 3204, 3486, 3878, 4446, 8513, 8626, 8839],
+                    backgroundColor: "rgba(54, 162, 235, 0.5)",
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    borderWidth: 1
+                },
+                {
+                    label: "GPU (128)",
+                    data: [3096, 3215, 3489, 3878, 4447, 8632, 8596, 8932],
+                    backgroundColor: "rgba(255, 99, 132, 0.5)",
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // PCA Execution Time Chart
+        const executionTimeCtx = document.getElementById("executionTimeChart").getContext("2d");
+        new Chart(executionTimeCtx, {
+            type: "bar",
+            data: executionTimeData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: "n"
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Execution Time (ms)"
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // CPU Time Data
+        const cpuTimeData = {
+            labels: ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8192"],
+            datasets: [
+                {
+                    label: "CPU",
+                    data: [248, 469, 698, 953, 1217, 1420, 1653, 1955],
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    fill: false
+                }
+            ]
+        };
+
+        // CPU Time Chart
+        const cpuTimeCtx = document.getElementById("cpuTimeChart").getContext("2d");
+        new Chart(cpuTimeCtx, {
+            type: "line",
+            data: cpuTimeData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: "n"
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Execution Time (ms)"
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // GPU/CPU Comparison Data
+        const gpuCpuComparisonData = {
+            labels: ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8192"],
+            datasets: [
+                {
+                    label: "GPU (64)",
+                    data: [3107, 3204, 3486, 3878, 4446, 8513, 8626, 8839],
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    fill: false
+                },
+                {
+                    label: "CPU",
+                    data: [248, 469, 698, 953, 1217, 1420, 1653, 1955],
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    fill: false
+                }
+            ]
+        };
+
+        // GPU/CPU Comparison Chart
+        const gpuCpuComparisonCtx = document.getElementById("gpuCpuComparisonChart").getContext("2d");
+        new Chart(gpuCpuComparisonCtx, {
+            type: "line",
+            data: gpuCpuComparisonData,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: "n"
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Execution Time (ms)"
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
