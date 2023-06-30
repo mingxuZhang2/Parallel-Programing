@@ -1,0 +1,6 @@
+﻿  BP_Origin.cpp
+D:\VS's\parallel_code\Final_work\BP_Origin\BP_Origin\BP_Origin.cpp(22,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_Origin\BP_Origin\BP_Origin.cpp(23,43): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_Origin\BP_Origin\BP_Origin.cpp(24,43): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_Origin\BP_Origin\BP_Origin.cpp(25,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  BP_Origin.vcxproj -> D:\VS's\parallel_code\Final_work\BP_Origin\x64\Debug\BP_Origin.exe

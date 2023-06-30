@@ -1,0 +1,6 @@
+﻿  BP_SIMD.cpp
+D:\VS's\parallel_code\Final_work\BP_SIMD\BP_SIMD\BP_SIMD.cpp(25,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_SIMD\BP_SIMD\BP_SIMD.cpp(26,43): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_SIMD\BP_SIMD\BP_SIMD.cpp(27,43): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\BP_SIMD\BP_SIMD\BP_SIMD.cpp(28,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  BP_SIMD.vcxproj -> D:\VS's\parallel_code\Final_work\BP_SIMD\x64\Debug\BP_SIMD.exe
