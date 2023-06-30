@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GPU时间和CPU时间对比</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div>
+    <canvas id="gpuChart" style="width: 600px; height: 400px;"></canvas>
+  </div>
+  <div>
+    <canvas id="cpuChart" style="width: 600px; height: 400px;"></canvas>
+  </div>
+
+  <script>
+    // 定义数据
+    var data = [
+      { label: 'suba_reg=2, subb_reg=2', gpuTime: 162.817511, cpuTime: 63.465625 },
+      { label: 'suba_reg=4, subb_reg=4', gpuTime: 225.732675, cpuTime: 62.965845 },
+      { label: 'suba_reg=8, subb_reg=8', gpuTime: 537.976575, cpuTime: 64.124355 },
+      { label: 'suba_reg=16, subb_reg=16', gpuTime: 159.992853, cpuTime: 63.321244 },
+      { label: 'suba_reg=32, subb_reg=32', gpuTime: 163.614352, cpuTime: 63.78445 },
+      { label: 'suba_reg=64, subb_reg=64', gpuTime: 202.542703, cpuTime: 63.441981 }
+    ];
+
+    // 创建GPU时间的柱状图
+    var gpuCtx = document.getElementById('gpuChart').getContext('2d');
+    new Chart(gpuCtx, {
+      type: 'bar',
+      data: {
+        labels: data.map(item => item.label),
+        datasets: [
+          {
+            label: 'GPU Computation Time (ms)',
+            data: data.map(item => item.gpuTime),
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Time (ms)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'suba_reg, subb_reg'
+            }
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    // 创建CPU时间的折线图
+    var cpuCtx = document.getElementById('cpuChart').getContext('2d');
+    new Chart(cpuCtx, {
+      type: 'line',
+      data: {
+        labels: data.map(item => item.label),
+        datasets: [
+          {
+            label: 'CPU Computaiton Time (ms)',
+            data: data.map(item => item.cpuTime),
+            fill: false,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2,
+            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+            pointRadius: 4,
+            pointHoverRadius: 5
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Time (ms)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'suba_reg, subb_reg'
+            }
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart" width="400" height="200"></canvas>
+  <script>
+    // 数据
+    var data = {
+      labels: ["600000 1800", "500000 1500", "400000 1200", "300000 900", "200000 600", "100000 300", "50000 150", "25000 75"],
+      datasets: [
+        {
+          label: "Origin",
+          data: [729.235, 179.6515, 45.656, 13.689, 5.789, 0.999, 0.16584, 0.019545],
+          backgroundColor: "rgba(255, 99, 132, 0.5)"
+        },
+        {
+          label: "MPI",
+          data: [179.6515, 64.2789, 19.7265, 5.05952, 1.61169, 0.317183, 0.0734297, 0.020658],
+          backgroundColor: "rgba(54, 162, 235, 0.5)"
+        },
+        {
+          label: "MPI_OpenMP",
+          data: [140.89841, 43.2365, 13.1215, 3.5478, 1.4988, 0.35987, 0.078964, 0.0149876],
+          backgroundColor: "rgba(255, 206, 86, 0.5)"
+        },
+        {
+          label: "SIMD_OpenMP_MPI",
+          data: [135.8489, 45.14654, 12.79865, 3.72877, 1.49291, 0.329065, 0.0693496, 0.0139778],
+          backgroundColor: "rgba(75, 192, 192, 0.5)"
+        }
+      ]
+    };
+
+    // 配置选项
+    var options = {
+      responsive: true,
+      scales: {
+        x: {
+          display: true,
+          title: {
+            display: true,
+            text: 'input_size embedding_dim'
+          }
+        },
+        y: {
+          display: true,
+          title: {
+            display: true,
+            text: '运行时间'
+          }
+        }
+      }
+    };
+
+    // 创建图表
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  </script>
+</body>
+</html>

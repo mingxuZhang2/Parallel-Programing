@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pooling算法运行时间比较</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['1000 1000 2', '2000 2000 4', '4000 4000 8', '8000 8000 16', '16000 16000 32', '32000 32000 64'],
+      datasets: [
+        {
+          label: 'Origin',
+          data: [0.00500842, 0.0125016, 0.0844329, 0.447501, 2.25992, 5.74283],
+          borderColor: 'red',
+          fill: false
+        },
+        {
+          label: 'MPI',
+          data: [0.00443384, 0.0158015, 0.00666671, 0.0295291, 0.965222, 1.65425],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'MPI_OpenMP',
+          data: [0.000726752, 0.00597195, 0.0119086, 0.0724601, 0.302678, 0.698356],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'AVX_OpenMP_MPI',
+          data: [0.00201667, 0.00341615, 0.0137254, 0.0634052, 0.224352, 0.507988],
+          borderColor: 'orange',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Pooling算法运行时间比较'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'n m pooling'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '时间'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

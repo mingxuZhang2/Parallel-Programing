@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algorithm Speedup</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['100000 8000', '200000 16000', '300000 24000', '400000 32000', '500000 40000', '600000 48000', '700000 56000', '800000 64000', '900000 72000', '1000000 80000'],
+      datasets: [
+        {
+          label: 'MPI',
+          data: [0.772419 / 0.194989, 3.1691 / 0.806252, 7.12401 / 1.8042, 12.6769 / 3.18735, 19.8055 / 4.96612, 28.7963 / 7.12824, 38.8059 / 9.70485, 50.7671 / 12.6991, 66.2713 / 17.5021, 91.2357 / 23.1332],
+          borderColor: 'red',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'Pthread',
+          data: [0.772419 / 0.115987, 3.1691 / 0.574984, 7.12401 / 1.04989, 12.6769 / 1.98786, 19.8055 / 3.00127, 28.7963 / 4.26987, 38.8059 / 6.24531, 50.7671 / 7.67589, 66.2713 / 9.97546, 91.2357 / 11.99654],
+          borderColor: 'green',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'AVX',
+          data: [0.772419 / 0.105485, 3.1691 / 0.474485, 7.12401 / 1.06939, 12.6769 / 1.89599, 19.8055 / 2.96107, 28.7963 / 4.24801, 38.8059 / 5.86649, 50.7671 / 7.76565, 66.2713 / 9.99211, 91.2357 / 12.3811],
+          borderColor: 'blue',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'GPU',
+          data: [0.772419 / 1.97562, 3.1691 / 6.87412, 7.12401 / 14.85643, 12.6769 / 25.56969, 19.8055 / 40.04005, 28.7963 / 57.85461, 38.8059 / 77.69089, 50.7671 / 101.6363, 66.2713 / 133.5507, 91.2357 / 180.2365],
+          borderColor: 'purple',
+          backgroundColor: 'transparent',
+        },
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Algorithm Speedup'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Signal Length - Kernel Length'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Speedup'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

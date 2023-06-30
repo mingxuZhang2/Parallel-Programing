@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>算法加速比折线图</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['600000 1800', '500000 1500', '400000 1200', '300000 900', '200000 600', '100000 300', '50000 150', '25000 75'],
+      datasets: [
+        {
+          label: 'MPI',
+          data: [729.235 / 179.6515, 179.6515 / 64.2789, 45.656 / 19.7265, 13.689 / 5.05952, 5.789 / 1.61169, 0.999 / 0.317183, 0.16584 / 0.0734297, 0.019545 / 0.020658],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'MPI_OpenMP',
+          data: [729.235 / 140.89841, 179.6515 / 43.2365, 45.656 / 13.1215, 13.689 / 3.5478, 5.789 / 1.4988, 0.999 / 0.35987, 0.16584 / 0.078964, 0.019545 / 0.0149876],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'AVX_OpenMP_MPI',
+          data: [729.235 / 135.8489, 179.6515 / 45.14654, 45.656 / 12.79865, 13.689 / 3.72877, 5.789 / 1.49291, 0.999 / 0.329065, 0.16584 / 0.0693496, 0.019545 / 0.0139778],
+          borderColor: 'orange',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: '算法加速比'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: '参数设置'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '加速比'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

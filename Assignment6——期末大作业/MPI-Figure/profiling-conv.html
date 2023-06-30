@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bar Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = [
+      { method: 'origin_MPI', CPU_Time: 8.329, parallelism: '6.10%', CPU_utilization: '4.50%', LLC_MISS_COUNT: 0, CPI_Rate: 0.282, Instruction_retired: 133887600000, L1_bound: 0.5, L2_bound: 0, L3_bound: 0.1, memory_bound: 0 },
+      { method: 'AVX_MPI', CPU_Time: 1.443, parallelism: '6.10%', CPU_utilization: '3.90%', LLC_MISS_COUNT: 0, CPI_Rate: 0.28, Instruction_retired: 23460000000, L1_bound: 0.1, L2_bound: 'N/A', L3_bound: 0, memory_bound: 0.1 },
+      { method: 'origin', CPU_Time: 28.735, parallelism: '5.70%', CPU_utilization: '4.40%', LLC_MISS_COUNT: 169895, CPI_Rate: 0.713, Instruction_retired: 168535000000, L1_bound: 0.70, L2_bound: 0.20, L3_bound: 0.10, memory_bound: 0.10 },
+      { method: 'AVX_openMP_MPI', CPU_Time: 1.356, parallelism: '6.70%', CPU_utilization: '4.30%', LLC_MISS_COUNT: 0, CPI_Rate: 0.27, Instruction_retired: 159813600000, L1_bound: 0, L2_bound: 0, L3_bound: 0, memory_bound: 0 }
+    ];
+
+    // 提取属性名称
+    const labels = Object.keys(data[0]).filter(key => key !== 'method');
+
+    // 创建柱状图
+    const chart = new Chart(document.getElementById('chart'), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: data.map(item => ({
+          label: item.method,
+          data: labels.map(label => item[label]),
+          backgroundColor: 'rgba(75, 192, 192, 0.6)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }))
+      },
+      options: {
+        scales: {
+          y: labels.reduce((scales, label, index) => {
+            const minValue = Math.min(...data.map(item => item[label]));
+            const maxValue = Math.max(...data.map(item => item[label]));
+            const step = (maxValue - minValue) / 5; // 设置刻度步长为属性值范围的1/5
+            scales[label] = {
+              beginAtZero: true,
+              position: index % 2 === 0 ? 'left' : 'right',
+              min: minValue - step, // 刻度范围为属性值的最小值-步长到最大值+步长
+              max: maxValue + step,
+              stepSize: step
+            };
+            return scales;
+          }, {})
+        }
+      }
+    });
+  </script>
+</body>
+</html>

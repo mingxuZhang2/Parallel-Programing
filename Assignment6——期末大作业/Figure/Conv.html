@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conv Runtimes</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['100000 8000', '200000 16000', '300000 24000', '400000 32000', '500000 40000', '600000 48000', '700000 56000', '800000 64000', '900000 72000', '1000000 80000'],
+      datasets: [
+        {
+          label: 'Origin',
+          data: [0.772419, 3.1691, 7.12401, 12.6769, 19.8055, 28.7963, 38.8059, 50.7671, 66.2713, 91.2357],
+          borderColor: 'red',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'MPI',
+          data: [0.115987, 0.574984, 1.04989, 1.98786, 3.00127, 4.26987, 6.24531, 7.67589, 9.97546, 11.99654],
+          borderColor: 'blue',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'Pthread',
+          data: [0.194989, 0.806252, 1.8042, 3.18735, 4.96612, 7.12824, 9.70485, 12.6991, 17.5021, 23.1332],
+          borderColor: 'green',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'AVX',
+          data: [0.105485, 0.474485, 1.06939, 1.89599, 2.96107, 4.24801, 5.86649, 7.76565, 9.99211, 12.3811],
+          borderColor: 'purple',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'GPU',
+          data: [1.97562, 6.87412, 14.85643, 25.56969, 40.04005, 57.85461, 77.69089, 101.6363, 133.5507, 180.2365],
+          borderColor: 'orange',
+          backgroundColor: 'transparent',
+        },
+      ],
+    };
+
+    // 配置选项
+    const options = {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    };
+
+    // 创建图表
+    const chartElement = document.getElementById('chart');
+    const chart = new Chart(chartElement, {
+      type: 'line',
+      data: data,
+      options: options,
+    });
+  </script>
+</body>
+</html>

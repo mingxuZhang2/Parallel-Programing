@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BP算法加速比比较</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['25', '50', '75', '100', '200', '300', '400', '500', '1000'],
+      datasets: [
+        {
+          label: 'Pthread',
+          data: [24.55 / 10.9, 49.12 / 21.26, 73.48 / 35.06, 97.9 / 46.67, 196.3 / 90.86, 295.05 / 133.42, 393.91 / 181.9, 492.9 / 221.98, 979.73 / 454.13],
+          borderColor: 'red',
+          fill: false
+        },
+        {
+          label: 'SIMD',
+          data: [24.55 / 2.9, 49.12 / 4.7, 73.48 / 8.3, 97.9 / 10.6, 196.3 / 21.7, 295.05 / 30.6, 393.91 / 41.2, 492.9 / 45.3, 979.73 / 90.5],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'MPI',
+          data: [24.55 / 3.6, 49.12 / 5.2, 73.48 / 8.9, 97.9 / 11.3, 196.3 / 23.5, 295.05 / 35.3, 393.91 / 45.6, 492.9 / 50.2, 979.73 / 116.7],
+          borderColor: 'green',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'BP算法加速比比较'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'num_sample'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '加速比'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCA算法测试时间</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['2000 200 10', '4000 400 10', '6000 600 10', '8000 800 10', '10000 1000 10', '15000 1500 10', '20000 2000 10', '30000 3000 10'],
+      datasets: [
+        {
+          label: 'PCA_Origin',
+          data: [0.725664, 1.54789, 5.26589, 12.59848, 46.7366, 203.324, 806.897, 1980.26],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'PCA_MPI(4个线程)',
+          data: [0.0595061, 0.327868, 0.957157, 3.56623, 5.24536, 38.24, 120.34, 743.685],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'PCA_MPI_OpenMP',
+          data: [0.0649667, 0.366709, 0.863804, 2.021, 3.57661, 16.092, 60.5729, 147.069],
+          borderColor: 'orange',
+          fill: false
+        },
+        {
+          label: 'PCA_AVX_MPI_OpenMP',
+          data: [0.0736112, 0.414305, 0.84937, 1.98605, 3.66901, 15.053, 69.4669, 148.581],
+          borderColor: 'purple',
+          fill: false
+        },
+        {
+          label: 'GPU',
+          data: [1.98456, 3.25649, 11.6598, 29.5894, 98.3595, 456.1259, 1608.959, 3789.598],
+          borderColor: 'red',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'PCA算法测试时间'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'n m k'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '时间'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

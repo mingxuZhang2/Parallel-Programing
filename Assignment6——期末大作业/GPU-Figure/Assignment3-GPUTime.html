@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GPU vs CPU Performance</title>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.26.0/dist/apexcharts.min.js"></script>
+</head>
+<body>
+  <div id="chart"></div>
+  <script>
+    var gpuData = [
+      { tileX: 2, tileY: 2, gpuTime: 162.572946 },
+      { tileX: 2, tileY: 4, gpuTime: 395.831476 },
+      { tileX: 4, tileY: 2, gpuTime: 396.520572 },
+      { tileX: 4, tileY: 4, gpuTime: 1195.600964 },
+      { tileX: 8, tileY: 8, gpuTime: 294.300598 },
+      { tileX: 16, tileY: 16, gpuTime: 134.053212 },
+      { tileX: 32, tileY: 32, gpuTime: 347.93992 },
+      { tileX: 64, tileY: 64, gpuTime: 2321.789087 }
+    ];
+
+    var cpuData = [
+      { tileX: 2, tileY: 2, cpuTime: 63.465625 },
+      { tileX: 2, tileY: 4, cpuTime: 61.992055 },
+      { tileX: 4, tileY: 2, cpuTime: 61.516650 },
+      { tileX: 4, tileY: 4, cpuTime: 63.378084 },
+      { tileX: 8, tileY: 8, cpuTime: 63.693671 },
+      { tileX: 16, tileY: 16, cpuTime: 63.423185 },
+      { tileX: 32, tileY: 32, cpuTime: 64.131882 },
+      { tileX: 64, tileY: 64, cpuTime: 62.008715 }
+    ];
+
+    var gpuTimeChart = new ApexCharts(document.querySelector("#chart"), {
+      series: [{
+        name: 'GPU Computation Time',
+        data: gpuData.map(function(item) { return item.gpuTime; })
+      }],
+      chart: {
+        type: 'bar',
+        height: 400
+      },
+      xaxis: {
+        categories: gpuData.map(function(item) { return `(${item.tileX}, ${item.tileY})`; })
+      }
+    });
+
+    var cpuTimeChart = new ApexCharts(document.querySelector("#chart"), {
+      series: [{
+        name: 'CPU Computaiton Time',
+        data: cpuData.map(function(item) { return item.cpuTime; })
+      }],
+      chart: {
+        type: 'line',
+        height: 400
+      },
+      xaxis: {
+        categories: cpuData.map(function(item) { return `(${item.tileX}, ${item.tileY})`; })
+      }
+    });
+
+    gpuTimeChart.render();
+    cpuTimeChart.render();
+  </script>
+</body>
+</html>

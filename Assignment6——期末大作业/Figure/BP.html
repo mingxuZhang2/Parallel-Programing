@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BP算法性能比较</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['25', '50', '75', '100', '200', '300', '400', '500', '1000'],
+      datasets: [
+        {
+          label: 'num_pthread=4',
+          data: [10.9, 21.26, 35.06, 46.67, 90.86, 133.42, 181.9, 221.98, 454.13],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'Origin',
+          data: [24.55, 49.12, 73.48, 97.9, 196.3, 295.05, 393.91, 492.9, 979.73],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'SIMD',
+          data: [2.9,4.7,8.3,10.6,21.7,30.6,41.2,45.3,90.5],
+          borderColor: 'orange',
+          fill: false
+        },
+        {
+          label: 'MPI',
+          data: [3.6, 5.2, 8.9, 11.3, 23.5, 35.3, 45.6, 50.2, 116.7],
+          borderColor: 'purple',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'BP算法性能比较'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'num_sample'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '时间'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCA算法加速比</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['2000 200 10', '4000 400 10', '6000 600 10', '8000 800 10', '10000 1000 10', '15000 1500 10', '20000 2000 10', '30000 3000 10'],
+      datasets: [
+        {
+          label: 'MPI',
+          data: [0.725664 / 0.0595061, 1.54789 / 0.327868, 5.26589 / 0.957157, 12.59848 / 3.56623, 46.7366 / 5.24536, 203.324 / 38.24, 806.897 / 120.34, 1980.26 / 743.685],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'MPI_OpenMP',
+          data: [0.725664 / 0.0649667, 1.54789 / 0.366709, 5.26589 / 0.863804, 12.59848 / 2.021, 46.7366 / 3.57661, 203.324 / 16.092, 806.897 / 60.5729, 1980.26 / 147.069],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'AVX_OpenMP_MPI',
+          data: [0.725664 / 0.0736112, 1.54789 / 0.414305, 5.26589 / 0.84937, 12.59848 / 1.98605, 46.7366 / 3.66901, 203.324 / 15.053, 806.897 / 69.4669, 1980.26 / 148.581],
+          borderColor: 'orange',
+          fill: false
+        },
+        {
+          label: 'GPU',
+          data: [0.725664 / 1.98456, 1.54789 / 3.25649, 5.26589 / 11.6598, 12.59848 / 29.5894, 46.7366 / 98.3595, 203.324 / 456.1259, 806.897 / 1608.959, 1980.26 / 3789.598],
+          borderColor: 'purple',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'PCA算法加速比'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'n m k'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '加速比'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

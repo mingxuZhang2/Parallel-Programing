@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embedding算法运行时间比较</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="chart"></canvas>
+
+  <script>
+    // 数据
+    const data = {
+      labels: ['600000 1800', '500000 1500', '400000 1200', '300000 900', '200000 600', '100000 300', '50000 150', '25000 75'],
+      datasets: [
+        {
+          label: 'Origin',
+          data: [729.235, 179.6515, 45.656, 13.689, 5.789, 0.999, 0.16584, 0.019545],
+          borderColor: 'red',
+          fill: false
+        },
+        {
+          label: 'MPI',
+          data: [179.6515, 64.2789, 19.7265, 5.05952, 1.61169, 0.317183, 0.0734297, 0.020658],
+          borderColor: 'blue',
+          fill: false
+        },
+        {
+          label: 'MPI_OpenMP',
+          data: [140.89841, 43.2365, 13.1215, 3.5478, 1.4988, 0.35987, 0.078964, 0.0149876],
+          borderColor: 'green',
+          fill: false
+        },
+        {
+          label: 'AVX_OpenMP_MPI',
+          data: [135.8489, 45.14654, 12.79865, 3.72877, 1.49291, 0.329065, 0.0693496, 0.0139778],
+          borderColor: 'orange',
+          fill: false
+        }
+      ]
+    };
+
+    // 绘制折线图
+    const ctx = document.getElementById('chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Embedding算法运行时间比较'
+        },
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: '参数设置'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: '运行时间'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCA算法测试时间</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // 数据
+    var data = {
+      labels: ['2000  200', '4000  400', '6000  600', '8000  800', '10000  1000', '15000  1500', '20000  2000', '30000  3000'],
+      datasets: [
+        {
+          label: 'PCA_Origin',
+          data: [0.725664, 1.54789, 5.26589, 12.59848, 46.7366, 203.324, 806.897, 1980.26],
+          borderColor: 'red',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'PCA_MPI',
+          data: [0.0595061, 0.327868, 0.957157, 3.56623, 5.24536, 38.24, 120.34, 743.685],
+          borderColor: 'blue',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'PCA_MPI_OpenMP',
+          data: [0.0649667, 0.366709, 0.863804, 2.021, 3.57661, 16.092, 60.5729, 147.069],
+          borderColor: 'green',
+          backgroundColor: 'transparent',
+        },
+        {
+          label: 'PCA_SIMD_MPI_OpenMP',
+          data: [0.0736112, 0.414305, 0.84937, 1.98605, 3.66901, 15.053, 69.4669, 148.581],
+          borderColor: 'orange',
+          backgroundColor: 'transparent',
+        }
+      ]
+    };
+
+    // 图表配置
+    var options = {
+      responsive: true,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'n,m'
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: '运行时间'
+          }
+        }
+      }
+    };
+
+    // 创建图表
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  </script>
+</body>
+</html>
