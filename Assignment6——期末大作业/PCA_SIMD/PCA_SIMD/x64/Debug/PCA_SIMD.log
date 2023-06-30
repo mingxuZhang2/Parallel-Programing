@@ -1,0 +1,9 @@
+﻿  PCA_SIMD.cpp
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(8,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(9,30): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(24,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(25,30): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(50,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(51,30): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\PCA_SIMD\PCA_SIMD\PCA_SIMD.cpp(83,33): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  PCA_SIMD.vcxproj -> D:\VS's\parallel_code\Final_work\PCA_SIMD\x64\Debug\PCA_SIMD.exe
