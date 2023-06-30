@@ -1,0 +1,6 @@
+﻿  Conv_Pthread.cpp
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(23,38): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(24,38): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(51,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(56,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+LINK : fatal error LNK1104: 无法打开文件“pthreadVC2.lib”

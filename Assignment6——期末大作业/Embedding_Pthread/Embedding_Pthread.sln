@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Embedding_Pthread", "Embedding_Pthread\Embedding_Pthread.vcxproj", "{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Debug|x64.ActiveCfg = Debug|x64
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Debug|x64.Build.0 = Debug|x64
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Debug|x86.ActiveCfg = Debug|Win32
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Debug|x86.Build.0 = Debug|Win32
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Release|x64.ActiveCfg = Release|x64
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Release|x64.Build.0 = Release|x64
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Release|x86.ActiveCfg = Release|Win32
+		{517F4271-D4CF-4B3E-8E44-AEF872F8F6CE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD1FCD61-E0CF-4FE0-A6C1-5593AC5ED843}
+	EndGlobalSection
+EndGlobal

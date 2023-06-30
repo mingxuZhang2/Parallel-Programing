@@ -1,0 +1,4 @@
+﻿  Embedding_SIMD.cpp
+D:\VS's\parallel_code\Final_work\Embedding_SIMD\Embedding_SIMD\Embedding_SIMD.cpp(31,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS's\parallel_code\Final_work\Embedding_SIMD\Embedding_SIMD\Embedding_SIMD.cpp(32,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Embedding_SIMD.vcxproj -> D:\VS's\parallel_code\Final_work\Embedding_SIMD\x64\Debug\Embedding_SIMD.exe

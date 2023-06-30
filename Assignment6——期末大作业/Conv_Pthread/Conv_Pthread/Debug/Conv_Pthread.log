@@ -1,0 +1,4 @@
+﻿  Conv_Pthread.cpp
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(55,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\VS's\parallel_code\Conv_Pthread\Conv_Pthread\Conv_Pthread.cpp(60,19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Conv_Pthread.vcxproj -> D:\VS's\parallel_code\Conv_Pthread\Debug\Conv_Pthread.exe
