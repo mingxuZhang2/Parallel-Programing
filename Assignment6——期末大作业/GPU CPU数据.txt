@@ -1,0 +1,53 @@
+Description: Intel Iris Xe Graphics
+Class: Laptop
+
+Socket: FCBGA1744
+
+Total Cores: 14 Cores, 20 Threads
+
+Performance Cores: 6 Cores, 12 Threads, 2.3 GHz Base, 4.7 GHz Turbo
+
+Efficient Cores: 8 Cores, 8 Threads, 1.7 GHz Base, 3.5 GHz Turbo
+
+Typical TDP: 45 W
+
+TDP Down: 35 W
+
+TDP Up: 115 W
+
+Cache Size: L1: 1248 KB, L2: 11.5 MB, L3: 24 MB
+
+Memory Support: Max. Memory Size: 64 GB (Up to DDR5 4800 MT/s, Up to DDR4 3200 MT/s, Up to )
+
+GPU - Intel Iris Xe
+
+
+
+
+主要参数
+核心频率	300 MHz
+Turbo频率	1100 MHz
+流处理单元	640 个
+核心架构	Generation 12.1 共11款
+GPU代号	Tiger Lake GT2
+生产工艺	10 nm
+TDP功耗	28W
+内存参数
+内存类型	System Shared
+内存位宽	System Shared
+最大显存	System Shared
+参数补充
+代工厂	Intel
+核心面积	146 mm²
+二级缓存	1024 KB
+三级缓存	3.75 MB
+光栅单元	40
+纹理单元	20
+总线接口	Ring Bus
+理论性能
+像素填充率	22.00 GPixel/s
+纹理填充率	44.00 GTexel/s
+显存带宽	68 GB/s
+FP16	2.816 TFLOPS (2:1)
+FP32	1,408 GFLOPS
+FP64	352.0 GFLOPS (1:4)​
